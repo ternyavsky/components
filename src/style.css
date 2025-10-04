@@ -1,0 +1,72 @@
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Элементы a без подчеркивания */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Наследование шрифтов для форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Удаляем все анимации для предпочтения reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --mobile: 360px;
+  --desktop: 1576px;
+  --color-default-bg: #ffffff;
+  --color-default-grey: rgba(244, 244, 245, 1);
+  --color-header-bg: rgba(46, 46, 46, 1);
+  --color-text-second-black: rgba(66, 66, 66, 1);
+  --color-text-red: rgba(255, 128, 124, 1);
+  --color-black-main: rgba(29, 29, 29, 1);
+  --color-grey-main: rgba(148, 148, 148, 1);
+  --color-purple-main: rgba(185, 85, 240, 1);
+  --color-yellow-main: rgba(250, 255, 119, 1);
+  --color-subtitle: rgba(78, 69, 83, 0.52);
+}
