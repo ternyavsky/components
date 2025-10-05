@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 <template>
   <div class="about-drop__header">
     <img
@@ -14,15 +12,15 @@
       class="about-drop__header__icon about-drop__header__icon--mobile"
     />
     <div class="about-drop__header__info">
-      <div class="about-drop__header__info__text">
-        <h2 class="about-drop__header__info__title">Личные качества</h2>
-        <p class="about-drop__header__info__description">Плюсы и минусы</p>
+      <div class="about-drop__header__text">
+        <h2 class="about-drop__header__title">Личные качества</h2>
+        <p class="about-drop__header__description">Плюсы и минусы</p>
       </div>
-      <div class="about-drop__header__info__button">
+      <div class="about-drop__header__button">
         <img
           src="/src/assets/arrow-up.svg"
           alt="arrow-right"
-          class="about-drop__header__info__button-icon"
+          class="about-drop__header__button-icon"
         />
       </div>
     </div>
@@ -30,12 +28,13 @@
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .about-drop__header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 28px;
-  background-color: var(--color-header-bg);
+  background-color: @color-header-bg;
   padding: 16px 0px 16px 16px;
   border-radius: 32px;
   @media (max-width: @mobile) {
@@ -48,13 +47,13 @@
     justify-content: space-between;
     width: 100%;
   }
-  &__info__text {
+  &__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--color-default-bg);
+    color: @color-default-bg;
   }
-  &__info__button {
+  &__button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -65,12 +64,12 @@
       padding-right: 16px;
     }
   }
-  &__info__button-icon {
+  &__button-icon {
     width: 48px;
     height: 48px;
     border-radius: 14px;
     padding: 18px 15px;
-    background: var(--color-default-bg);
+    background: @color-default-bg;
     @media (max-width: @mobile) {
       width: 24px;
       height: 24px;
@@ -105,22 +104,22 @@
       }
     }
   }
-  &__info__title {
-    font-size: 28px;
+  &__title {
+    font-size: 1.75rem;
     font-weight: 900;
     line-height: 44px;
     @media (max-width: @mobile) {
-      font-size: 18px;
+      font-size: 1.125rem;
       line-height: 24px;
       font-weight: 800;
     }
   }
-  &__info__description {
-    font-size: 20px;
+  &__description {
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
     @media (max-width: @mobile) {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 16px;
       font-weight: 600;
     }

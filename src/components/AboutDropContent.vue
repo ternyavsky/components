@@ -27,6 +27,7 @@ import StateBlock from "./StateBlock.vue";
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .about-drop-content {
   display: flex;
   flex-direction: column;
@@ -34,15 +35,15 @@ import StateBlock from "./StateBlock.vue";
   gap: 16px;
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 900;
     line-height: 32px;
   }
   &__description {
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 700;
     line-height: 28px;
-    color: var(--color-black-main);
+    color: @color-black-main;
   }
 
   &__state-block {

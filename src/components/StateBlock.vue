@@ -60,13 +60,14 @@
   </div>
 </template>
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .state-block {
-  background: var(--color-default-grey);
+  background: @color-default-grey;
   border-radius: 32px;
   padding: 40px 32px;
 
   &__title {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     line-height: 28px;
     margin-bottom: 16px;
@@ -89,7 +90,7 @@
       content: "";
       width: 4px;
       height: 4px;
-      background-color: var(--color-text-red);
+      background-color: @color-text-red;
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -99,23 +100,23 @@
 
   &__item-title {
     font-weight: 800;
-    color: var(--color-text-red);
-    font-size: 17px;
+    color: @color-text-red;
+    font-size: 1.0625rem;
     line-height: 28px;
     @media (max-width: @mobile) {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 22px;
       font-weight: 600;
     }
   }
 
   &__item-description {
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 600;
     line-height: 28px;
-    color: var(--color-black-main);
+    color: @color-black-main;
     @media (max-width: @mobile) {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 22px;
       font-weight: 600;
     }

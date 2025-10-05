@@ -26,12 +26,12 @@ import PromotionBlock from "./PromotionBlock.vue";
     max-width: 100%;
   }
   &__title {
-    font-size: 32px;
+    font-size: 2rem;
 
     font-weight: 900;
     line-height: 40px;
     @media (max-width: @mobile) {
-      font-size: 28px;
+      font-size: 1.75rem;
       line-height: 32px;
     }
     margin-bottom: 32px;

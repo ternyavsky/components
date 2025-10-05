@@ -1,8 +1,8 @@
 <template>
   <div class="matrix-general">
     <div class="matrix-general__container">
-      <h2 class="matrix-general__container__title">Общая матрица</h2>
-      <div class="matrix-general__container__description">
+      <h2 class="matrix-general__title">Общая матрица</h2>
+      <div class="matrix-general__description">
         <p>
           Метод расчёта Матрицы Судьбы объединяет многовековые знания
           классической астрологии, нумерологические законы и мудрость Старших
@@ -27,6 +27,7 @@
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .matrix-general {
   &__bg {
     position: absolute;
@@ -53,7 +54,7 @@
   position: relative;
   margin-top: 36px;
   display: flex;
-  background-color: var(--color-default-bg);
+  background-color: @color-default-bg;
   border: 1px solid rgba(236, 236, 236, 1);
   flex-direction: column;
   padding: 32px;
@@ -65,7 +66,7 @@
     padding: 16px;
   }
   &__title {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 36px;
     position: relative;
@@ -83,7 +84,7 @@
   &__description {
     display: flex;
     flex-direction: column;
-    font-size: 17px;
+    font-size: 1.0625rem;
     gap: 28px;
   }
 }

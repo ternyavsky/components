@@ -17,8 +17,9 @@
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .matrix-diagram {
-  background-color: var(--color-default-grey);
+  background-color: @color-default-grey;
   border-radius: 32px;
   padding: 0px 32px;
   align-items: center;
@@ -37,17 +38,17 @@
     gap: 16px;
   }
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
     font-weight: 900;
   }
   &__description {
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 28px;
     font-weight: 700;
-    color: var(--color-black-main);
+    color: @color-black-main;
     @media (max-width: @mobile) {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 22px;
       font-weight: 600;
     }

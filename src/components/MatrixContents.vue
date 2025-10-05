@@ -122,6 +122,7 @@ import lockIcon from "/src/assets/lock.svg";
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .matrix-contents-container {
   display: flex;
   flex-direction: column;
@@ -132,7 +133,7 @@ import lockIcon from "/src/assets/lock.svg";
     gap: 16px;
   }
   .matrix-contents {
-    background-color: var(--color-default-grey);
+    background-color: @color-default-grey;
     padding: 16px;
     border-radius: 28px;
     display: flex;
@@ -142,7 +143,7 @@ import lockIcon from "/src/assets/lock.svg";
       background-color: rgba(255, 255, 255, 1);
       border-radius: 16px;
       padding: 12px 0px 8px 16px;
-      font-size: 28px;
+      font-size: 1.75rem;
       font-weight: 900;
       line-height: 36px;
       @media (max-width: @mobile) {
@@ -166,7 +167,7 @@ import lockIcon from "/src/assets/lock.svg";
     }
 
     &__section-title {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: 800;
       line-height: 24px;
     }
@@ -179,17 +180,17 @@ import lockIcon from "/src/assets/lock.svg";
     }
 
     &__item {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       line-height: 20px;
-      color: var(--color-text-second-black);
+      color: @color-text-second-black;
     }
 
     &__disclaimer {
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 700;
       line-height: 16px;
-      color: var(--color-subtitle);
+      color: @color-subtitle;
       margin-top: 24px;
       @media (min-width: @desktop) {
         padding: 0px 16px 16px 16px;
@@ -202,7 +203,7 @@ import lockIcon from "/src/assets/lock.svg";
     }
   }
   .matrix-transcription {
-    background-color: var(--color-default-grey);
+    background-color: @color-default-grey;
     padding: 16px;
     border-radius: 28px;
     display: flex;
@@ -220,24 +221,24 @@ import lockIcon from "/src/assets/lock.svg";
     }
     &__title {
       margin-top: 24px;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 900;
       line-height: 28px;
       text-align: center;
       @media (max-width: @mobile) {
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 24px;
       }
     }
     &__description {
       margin-top: 12px;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 700;
       line-height: 22px;
       text-align: center;
-      color: var(--color-text-second-black);
+      color: @color-text-second-black;
       @media (max-width: @mobile) {
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 22px;
       }
     }
@@ -245,7 +246,7 @@ import lockIcon from "/src/assets/lock.svg";
       margin-top: 24px;
       padding: 21px 0px;
       border-radius: 24px;
-      border: 1px dashed var(--color-black-main);
+      border: 1px dashed @color-black-main;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -258,11 +259,11 @@ import lockIcon from "/src/assets/lock.svg";
         height: 24px;
       }
       &__text {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 800;
         line-height: 20px;
         @media (max-width: @mobile) {
-          font-size: 16px;
+          font-size: 1rem;
         }
       }
       &:hover {

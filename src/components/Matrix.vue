@@ -28,6 +28,7 @@ import MatrixAbout from "./MatrixAbout.vue";
 </template>
 
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .matrix-text {
   display: flex;
   flex-direction: column;
@@ -36,18 +37,18 @@ import MatrixAbout from "./MatrixAbout.vue";
     padding: 72px 16px;
   }
   &__title {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 60px;
     @media (max-width: @mobile) {
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 28px;
     }
   }
   &__description {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--color-subtitle);
+    color: @color-subtitle;
   }
 }
 .matrix-info {

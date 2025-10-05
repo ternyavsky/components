@@ -27,6 +27,7 @@ import AddBlockCard from "./AddBlockCard.vue";
   </div>
 </template>
 <style lang="less" scoped>
+@import "../styles/variables.less";
 .about-drop-content__add-block {
   display: flex;
   flex-direction: row;
@@ -50,23 +51,23 @@ import AddBlockCard from "./AddBlockCard.vue";
     flex-direction: column;
   }
   &__subtitle__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 32px;
   }
   &__subtitle__subtitle {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 800;
     line-height: 32px;
   }
   &__subtitle__description {
     margin-top: 16px;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 700;
     line-height: 28px;
-    color: var(--color-black-main);
+    color: @color-black-main;
     @media (max-width: @mobile) {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 22px;
       font-weight: 600;
     }
