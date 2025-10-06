@@ -58,7 +58,10 @@ img {
 
 :root {
   --mobile: 360px;
+  --tablet: 768px;
+  --laptop: 1024px;
   --desktop: 1576px;
+  --large-desktop: 1920px;
   --color-default-bg: #ffffff;
   --color-default-grey: rgba(244, 244, 245, 1);
   --color-header-bg: rgba(46, 46, 46, 1);

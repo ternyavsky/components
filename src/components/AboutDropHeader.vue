@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineEmits, defineProps } from "vue";
+
+const props = defineProps<{
+  isOpen: boolean;
+}>();
+
+const emit = defineEmits<{
+  toggle: [];
+}>();
+
+const handleToggle = () => {
+  emit("toggle");
+};
+</script>
 <template>
   <div class="about-drop__header">
     <img
@@ -16,11 +30,12 @@
         <h2 class="about-drop__header__title">Личные качества</h2>
         <p class="about-drop__header__description">Плюсы и минусы</p>
       </div>
-      <div class="about-drop__header__button">
+      <div class="about-drop__header__button" @click="handleToggle">
         <img
           src="/src/assets/arrow-up.svg"
           alt="arrow-right"
           class="about-drop__header__button-icon"
+          :class="{ 'about-drop__header__button-icon--rotated': !props.isOpen }"
         />
       </div>
     </div>
@@ -37,6 +52,19 @@
   background-color: @color-header-bg;
   padding: 16px 0px 16px 16px;
   border-radius: 32px;
+
+  @media (max-width: @laptop) {
+    gap: 24px;
+    padding: 14px 0px 14px 14px;
+    border-radius: 28px;
+  }
+
+  @media (max-width: @tablet) {
+    gap: 20px;
+    padding: 12px 0px 12px 12px;
+    border-radius: 24px;
+  }
+
   @media (max-width: @mobile) {
     border-radius: 20px;
     padding: 8px 0px 8px 8px;
@@ -60,21 +88,53 @@
     padding-right: 32px;
     cursor: pointer;
     gap: 28px;
+
+    @media (max-width: @laptop) {
+      padding-right: 28px;
+      gap: 24px;
+    }
+
+    @media (max-width: @tablet) {
+      padding-right: 24px;
+      gap: 20px;
+    }
+
     @media (max-width: @mobile) {
       padding-right: 16px;
     }
   }
+
   &__button-icon {
     width: 48px;
     height: 48px;
     border-radius: 14px;
     padding: 18px 15px;
     background: @color-default-bg;
+    transition: transform 0.3s ease;
+
+    @media (max-width: @laptop) {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      padding: 16px 13px;
+    }
+
+    @media (max-width: @tablet) {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      padding: 12px 10px;
+    }
+
     @media (max-width: @mobile) {
       width: 24px;
       height: 24px;
       border-radius: 24px;
       padding: 5px;
+    }
+
+    &--rotated {
+      transform: rotate(180deg);
     }
   }
   &__icon {
@@ -84,6 +144,19 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
+
+    @media (max-width: @laptop) {
+      max-width: 200px;
+      max-height: 76px;
+      border-radius: 18px;
+    }
+
+    @media (max-width: @tablet) {
+      max-width: 150px;
+      max-height: 60px;
+      border-radius: 16px;
+    }
+
     @media (max-width: @mobile) {
       max-width: 73px;
       min-height: 48px;
@@ -92,32 +165,56 @@
 
     &--desktop {
       display: block;
-      @media (max-width: @mobile) {
+      @media (max-width: @tablet) {
         display: none;
       }
     }
 
     &--mobile {
       display: none;
-      @media (max-width: @mobile) {
+      @media (max-width: @tablet) {
         display: block;
       }
     }
   }
+
   &__title {
     font-size: 1.75rem;
     font-weight: 900;
     line-height: 44px;
+
+    @media (max-width: @laptop) {
+      font-size: 1.5rem;
+      line-height: 36px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1.25rem;
+      line-height: 30px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 1.125rem;
       line-height: 24px;
       font-weight: 800;
     }
   }
+
   &__description {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
+
+    @media (max-width: @laptop) {
+      font-size: 1.125rem;
+      line-height: 26px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1rem;
+      line-height: 22px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 0.875rem;
       line-height: 16px;

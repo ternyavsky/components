@@ -4,96 +4,99 @@ import lockIcon from "/src/assets/lock.svg";
 </script>
 
 <template>
-  <div class="matrix-contents-container">
-    <div class="matrix-contents">
-      <div class="matrix-contents__title">Оглавление</div>
-      <div class="matrix-contents__list">
-        <div class="matrix-contents__section">
-          <div class="matrix-contents__section-title">1. Общая информация</div>
-          <div class="matrix-contents__items">
-            <div class="matrix-contents__item">
+  <div class="matrix-maintenance-container">
+    <div class="matrix-maintenance">
+      <div class="matrix-maintenance__title">
+        <h3 class="matrix-maintenance__title__text">Содержание</h3>
+        <div class="matrix-maintenance__title__button">Полный доступ</div>
+      </div>
+      <div class="matrix-maintenance__list">
+        <div class="matrix-maintenance__section">
+          <div class="matrix-maintenance__section-title">
+            1. Общая информация
+          </div>
+          <div class="matrix-maintenance__items">
+            <div class="matrix-maintenance__item">
               1.1 Характер человека в плюсе и минусе
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.2 Кармический хвост и задачи прошлой жизни
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.3 Проработка души в нынешнем воплощении
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.4 Главные задачи души до 40 лет
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.5 Точка гармонии и душевного комфорта
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.6 Родовые программы по линиям отца и матери
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.7 Врождённые таланты человека
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               1.8 Детско-родительская карма
             </div>
           </div>
         </div>
 
-        <div class="matrix-contents__section">
-          <div class="matrix-contents__section-title">2. Предназначение</div>
-          <div class="matrix-contents__items">
-            <div class="matrix-contents__item">
+        <div class="matrix-maintenance__section">
+          <div class="matrix-maintenance__section-title">2. Предназначение</div>
+          <div class="matrix-maintenance__items">
+            <div class="matrix-maintenance__item">
               2.1 Личное предназначение человека
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               2.2 Социальное предназначение человека
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               2.3 Духовное предназначение человека
             </div>
           </div>
         </div>
 
-        <div class="matrix-contents__section">
-          <div class="matrix-contents__section-title">3. Отношения</div>
-          <div class="matrix-contents__items">
-            <div class="matrix-contents__item">
+        <div class="matrix-maintenance__section">
+          <div class="matrix-maintenance__section-title">3. Отношения</div>
+          <div class="matrix-maintenance__items">
+            <div class="matrix-maintenance__item">
               3.1 Встреча и готовность к отношениям
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               3.2 Общий характер отношений с партнёром
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               3.3 Проблемы и способы их решения
             </div>
           </div>
         </div>
 
-        <div class="matrix-contents__section">
-          <div class="matrix-contents__section-title">4. Деньги и карьера</div>
-          <div class="matrix-contents__items">
-            <div class="matrix-contents__item">
+        <div class="matrix-maintenance__section">
+          <div class="matrix-maintenance__section-title">
+            4. Деньги и карьера
+          </div>
+          <div class="matrix-maintenance__items">
+            <div class="matrix-maintenance__item">
               4.1 Общее состояние и кармические задачи
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               4.2 Финансовый потенциал и профессии
             </div>
-            <div class="matrix-contents__item">
+            <div class="matrix-maintenance__item">
               4.3 Денежный поток: блокировка и развитие
             </div>
           </div>
         </div>
-        <div class="matrix-contents__items">
-          <div class="matrix-contents__item">5 Чакровая карта здоровья</div>
-          <div class="matrix-contents__item">6 Прогноз по годам жизни</div>
+        <div class="matrix-maintenance__items">
+          <div class="matrix-maintenance__item">5 Чакровая карта здоровья</div>
+          <div class="matrix-maintenance__item">6 Прогноз по годам жизни</div>
         </div>
       </div>
 
-      <div class="matrix-contents__disclaimer">
-        Нажимая на кнопку, вы соглашаетесь с нашими
-        <a href="#" class="matrix-contents__link">правилами </a>
-        <a href="#" class="matrix-contents__link"
-          >обработки персональных данных</a
-        >.
+      <div class="matrix-maintenance__disclaimer">
+        Матрица судьбы онлайн: Бесплатный расчёт с расшифровкой
       </div>
     </div>
     <div class="matrix-transcription">
@@ -123,7 +126,7 @@ import lockIcon from "/src/assets/lock.svg";
 
 <style lang="less" scoped>
 @import "../styles/variables.less";
-.matrix-contents-container {
+.matrix-maintenance-container {
   display: flex;
   flex-direction: column;
   min-width: 500px;
@@ -143,7 +146,7 @@ import lockIcon from "/src/assets/lock.svg";
     min-width: 100%;
     gap: 16px;
   }
-  .matrix-contents {
+  .matrix-maintenance {
     background-color: @color-default-grey;
     padding: 16px;
     border-radius: 28px;
@@ -153,10 +156,43 @@ import lockIcon from "/src/assets/lock.svg";
     &__title {
       background-color: rgba(255, 255, 255, 1);
       border-radius: 16px;
-      padding: 12px 0px 8px 16px;
+      padding: 12px 16px 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       font-size: 1.75rem;
       font-weight: 900;
       line-height: 36px;
+      @media (max-width: @tablet) {
+        font-size: 1.5rem;
+        line-height: 32px;
+      }
+      @media (max-width: @mobile) {
+        font-size: 1.25rem;
+        line-height: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      &__text {
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 24px;
+      }
+      &__button {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 125, 164, 1) 0%,
+          rgba(178, 82, 223, 1) 100%
+        );
+        padding: 6px 16px;
+        color: @color-default-bg;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 24px;
+      }
 
       @media (max-width: @laptop) {
         font-size: 1.5rem;
@@ -220,7 +256,12 @@ import lockIcon from "/src/assets/lock.svg";
       font-size: 1rem;
       font-weight: 500;
       line-height: 20px;
-      color: @color-text-second-black;
+      color: @color-blue-main;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 5%;
+      text-decoration-skip-ink: all;
+      text-decoration-color: rgba(18, 63, 147, 0.24);
 
       @media (max-width: @tablet) {
         font-size: 0.9rem;

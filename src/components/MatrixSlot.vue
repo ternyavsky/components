@@ -31,6 +31,19 @@
   gap: 28px;
   border-radius: 32px;
   padding: 16px;
+
+  @media (max-width: @laptop) {
+    gap: 24px;
+    border-radius: 28px;
+    padding: 14px;
+  }
+
+  @media (max-width: @tablet) {
+    gap: 20px;
+    border-radius: 24px;
+    padding: 12px;
+  }
+
   @media (max-width: @mobile) {
     gap: 12px;
     border-radius: 20px;
@@ -43,6 +56,19 @@
     height: 100%;
     border-radius: 20px;
     object-fit: contain;
+
+    @media (max-width: @laptop) {
+      max-width: 200px;
+      max-height: 76px;
+      border-radius: 18px;
+    }
+
+    @media (max-width: @tablet) {
+      max-width: 150px;
+      max-height: 60px;
+      border-radius: 16px;
+    }
+
     @media (max-width: @mobile) {
       max-width: 73px;
       height: 48px;
@@ -50,31 +76,61 @@
       object-fit: cover;
     }
   }
+
   &__content {
     display: flex;
     align-items: center;
     width: 100%;
     gap: 16px;
+
+    @media (max-width: @tablet) {
+      gap: 12px;
+    }
   }
+
   &__text {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   &__title {
     font-size: 1.75rem;
     font-weight: 900;
     line-height: 44px;
+
+    @media (max-width: @laptop) {
+      font-size: 1.5rem;
+      line-height: 36px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1.25rem;
+      line-height: 30px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 1.125rem;
       line-height: 24px;
       font-weight: 900;
     }
   }
+
   &__description {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 28px;
+
+    @media (max-width: @laptop) {
+      font-size: 1.125rem;
+      line-height: 26px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1rem;
+      line-height: 22px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 0.875rem;
       line-height: 16px;
@@ -93,6 +149,21 @@
     width: 48px;
     padding: 12px;
     height: 48px;
+
+    @media (max-width: @laptop) {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    @media (max-width: @tablet) {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      padding: 8px;
+    }
+
     @media (max-width: @mobile) {
       width: 24px;
       height: 24px;

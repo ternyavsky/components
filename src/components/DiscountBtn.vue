@@ -27,14 +27,38 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media (max-width: @laptop) {
+    border-radius: 18px;
+    gap: 12px;
+  }
+
+  @media (max-width: @tablet) {
+    border-radius: 16px;
+    gap: 10px;
+    padding: 6px 0px;
+  }
+
   @media (max-width: @mobile) {
     padding: 8px 8px 8px 20px;
+    border-radius: 14px;
   }
   &__text {
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 20px;
     color: @color-default-bg;
+
+    @media (max-width: @laptop) {
+      font-size: 1.125rem;
+      line-height: 19px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1rem;
+      line-height: 18px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 1rem;
       line-height: 18px;
@@ -49,8 +73,22 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+
+    @media (max-width: @laptop) {
+      border-radius: 10px;
+      gap: 10px;
+      padding: 6px 6px 6px 8px;
+    }
+
+    @media (max-width: @tablet) {
+      border-radius: 8px;
+      gap: 8px;
+      padding: 6px 6px 6px 8px;
+    }
+
     @media (max-width: @mobile) {
       padding: 8px 8px 8px 10px;
+      border-radius: 8px;
     }
   }
   &__old-price {
@@ -60,6 +98,22 @@
     color: #000;
     position: relative;
     padding-top: 4px;
+
+    @media (max-width: @laptop) {
+      font-size: 0.8rem;
+      line-height: 15px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 0.75rem;
+      line-height: 14px;
+      padding-top: 3px;
+    }
+
+    @media (max-width: @mobile) {
+      font-size: 0.75rem;
+      line-height: 14px;
+    }
 
     &::after {
       content: "";
@@ -86,8 +140,28 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+
+    @media (max-width: @laptop) {
+      font-size: 1.125rem;
+      line-height: 26px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+
+    @media (max-width: @mobile) {
+      font-size: 1rem;
+      line-height: 22px;
+    }
   }
+
   &__new-price-desktop {
+    @media (max-width: @tablet) {
+      display: none;
+    }
+
     @media (max-width: @mobile) {
       display: none;
     }

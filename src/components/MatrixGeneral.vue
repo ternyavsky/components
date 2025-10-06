@@ -45,6 +45,29 @@
     background-position: center, center;
     background-repeat: no-repeat;
     z-index: 1;
+
+    @media (max-width: @laptop) {
+      width: 60%;
+      height: 400px;
+      left: 20%;
+      top: 120px;
+      max-width: 500px;
+      display: none;
+    }
+
+    @media (max-width: @tablet) {
+      width: 50%;
+      height: 300px;
+      left: 25%;
+      top: 100px;
+      max-width: 350px;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
     @media (max-width: @mobile) {
       display: none;
     }
@@ -62,8 +85,22 @@
   gap: 16px;
   z-index: 2;
   max-height: fit-content;
+  overflow: hidden;
+
+  @media (max-width: @laptop) {
+    padding: 28px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: @tablet) {
+    padding: 20px;
+    margin-top: 24px;
+    border-radius: 12px;
+  }
+
   @media (max-width: @mobile) {
     padding: 16px;
+    margin-top: 20px;
   }
   &__title {
     font-size: 2rem;
@@ -75,17 +112,45 @@
       content: " судьбы";
     }
 
+    @media (max-width: @laptop) {
+      font-size: 1.75rem;
+      line-height: 32px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1.5rem;
+      line-height: 28px;
+    }
+
     @media (max-width: @mobile) {
+      font-size: 1.25rem;
+      line-height: 24px;
       &::after {
         display: none;
       }
     }
   }
+
   &__description {
     display: flex;
     flex-direction: column;
     font-size: 1.0625rem;
     gap: 28px;
+
+    @media (max-width: @laptop) {
+      font-size: 1rem;
+      gap: 24px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 0.9rem;
+      gap: 20px;
+    }
+
+    @media (max-width: @mobile) {
+      font-size: 0.875rem;
+      gap: 16px;
+    }
   }
 }
 </style>

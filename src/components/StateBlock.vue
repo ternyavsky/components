@@ -66,11 +66,44 @@
   border-radius: 32px;
   padding: 40px 32px;
 
+  @media (max-width: @laptop) {
+    padding: 32px 24px;
+    border-radius: 28px;
+  }
+
+  @media (max-width: @tablet) {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  @media (max-width: @mobile) {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
   &__title {
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 28px;
     margin-bottom: 16px;
+
+    @media (max-width: @laptop) {
+      font-size: 1.125rem;
+      line-height: 26px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 1rem;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: @mobile) {
+      font-size: 0.9rem;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
@@ -80,11 +113,31 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: @laptop) {
+      gap: 18px;
+    }
+
+    @media (max-width: @tablet) {
+      gap: 16px;
+    }
+
+    @media (max-width: @mobile) {
+      gap: 14px;
+    }
   }
 
   &__item {
     position: relative;
     padding-left: 20px;
+
+    @media (max-width: @tablet) {
+      padding-left: 18px;
+    }
+
+    @media (max-width: @mobile) {
+      padding-left: 16px;
+    }
 
     &::before {
       content: "";
@@ -95,6 +148,18 @@
       position: absolute;
       left: 0;
       top: 10px;
+
+      @media (max-width: @tablet) {
+        width: 3px;
+        height: 3px;
+        top: 8px;
+      }
+
+      @media (max-width: @mobile) {
+        width: 3px;
+        height: 3px;
+        top: 6px;
+      }
     }
   }
 
@@ -103,6 +168,17 @@
     color: @color-text-red;
     font-size: 1.0625rem;
     line-height: 28px;
+
+    @media (max-width: @laptop) {
+      font-size: 1rem;
+      line-height: 26px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 0.9rem;
+      line-height: 24px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 0.875rem;
       line-height: 22px;
@@ -115,6 +191,17 @@
     font-weight: 600;
     line-height: 28px;
     color: @color-black-main;
+
+    @media (max-width: @laptop) {
+      font-size: 1rem;
+      line-height: 26px;
+    }
+
+    @media (max-width: @tablet) {
+      font-size: 0.9rem;
+      line-height: 24px;
+    }
+
     @media (max-width: @mobile) {
       font-size: 0.875rem;
       line-height: 22px;
