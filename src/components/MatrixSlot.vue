@@ -28,147 +28,166 @@
   align-items: center;
   justify-content: space-between;
   background-color: @color-default-grey;
-  gap: 28px;
-  border-radius: 32px;
-  padding: 16px;
+  gap: 16px;
+  border-radius: 20px;
+  padding: 12px;
 
   @media (max-width: @laptop) {
-    gap: 24px;
-    border-radius: 28px;
-    padding: 14px;
+    gap: 14px;
+    border-radius: 18px;
+    padding: 10px;
   }
 
   @media (max-width: @tablet) {
-    gap: 20px;
-    border-radius: 24px;
-    padding: 12px;
+    gap: 12px;
+    border-radius: 16px;
+    padding: 8px;
   }
 
   @media (max-width: @mobile) {
-    gap: 12px;
-    border-radius: 20px;
-    padding: 8px 16px;
+    gap: 10px;
+    border-radius: 14px;
+    padding: 6px 12px;
   }
   &__img {
-    max-width: 232px;
-    max-height: 88px;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: contain;
+    width: 232px;
+    height: 88px;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
 
     @media (max-width: @laptop) {
-      max-width: 200px;
-      max-height: 76px;
-      border-radius: 18px;
+      border-radius: 14px;
     }
 
     @media (max-width: @tablet) {
-      max-width: 150px;
-      max-height: 60px;
-      border-radius: 16px;
+      width: 64px;
+      height: 48px;
+      border-radius: 12px;
     }
 
     @media (max-width: @mobile) {
-      max-width: 73px;
+      width: 73px;
       height: 48px;
-      border-radius: 12px;
-      object-fit: cover;
+      border-radius: 10px;
     }
   }
 
   &__content {
     display: flex;
     align-items: center;
-    width: 100%;
-    gap: 16px;
+    flex: 1;
+    gap: 12px;
 
     @media (max-width: @tablet) {
-      gap: 12px;
+      gap: 10px;
+    }
+
+    @media (max-width: @mobile) {
+      gap: 8px;
     }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
   }
 
   &__title {
-    font-size: 1.75rem;
-    font-weight: 900;
-    line-height: 44px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
 
     @media (max-width: @laptop) {
-      font-size: 1.5rem;
-      line-height: 36px;
+      font-size: 16px;
+      line-height: 22px;
     }
 
     @media (max-width: @tablet) {
-      font-size: 1.25rem;
-      line-height: 30px;
+      font-size: 15px;
+      line-height: 20px;
     }
 
     @media (max-width: @mobile) {
-      font-size: 1.125rem;
-      line-height: 24px;
-      font-weight: 900;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 
   &__description {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: @color-grey-main;
 
     @media (max-width: @laptop) {
-      font-size: 1.125rem;
-      line-height: 26px;
+      font-size: 13px;
+      line-height: 18px;
     }
 
     @media (max-width: @tablet) {
-      font-size: 1rem;
-      line-height: 22px;
+      font-size: 12px;
+      line-height: 16px;
     }
 
     @media (max-width: @mobile) {
-      font-size: 0.875rem;
-      line-height: 16px;
-      font-weight: 600;
+      font-size: 11px;
+      line-height: 14px;
     }
   }
   &__button {
     display: flex;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(
       90deg,
       rgba(255, 104, 217, 1) 0%,
       rgba(176, 112, 255, 1) 100%
     );
-    border-radius: 14px;
+    border-radius: 12px;
     width: 48px;
-    padding: 12px;
     height: 48px;
+    flex-shrink: 0;
 
     @media (max-width: @laptop) {
       width: 44px;
       height: 44px;
-      border-radius: 12px;
-      padding: 10px;
+      border-radius: 10px;
     }
 
     @media (max-width: @tablet) {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      padding: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
     }
 
     @media (max-width: @mobile) {
-      width: 24px;
-      height: 24px;
-      border-radius: 24px;
-      padding: 4px;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+  }
+
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+
+    @media (max-width: @laptop) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (max-width: @tablet) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: @mobile) {
+      width: 16px;
+      height: 16px;
     }
   }
 }

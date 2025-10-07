@@ -29,12 +29,43 @@
 <style lang="less" scoped>
 @import "../styles/variables.less";
 .matrix-general {
+  position: relative;
+  .matrix-general__container {
+    position: relative;
+    margin-top: 36px;
+    display: flex;
+    background-color: @color-default-bg;
+    border: 1px solid rgba(236, 236, 236, 1);
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 16px;
+    z-index: 2;
+    max-height: fit-content;
+
+    @media (max-width: @laptop) {
+      padding: 28px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: @tablet) {
+      padding: 20px;
+      margin-top: 24px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: @mobile) {
+      padding: 16px;
+      margin-top: 20px;
+    }
+  }
+
   &__bg {
     position: absolute;
-    top: 150px;
-    left: 98px;
-    width: 932px;
-    height: 621px;
+    top: 36px;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
     background-image: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.79),
@@ -44,24 +75,21 @@
     background-size: 100% 100%, cover;
     background-position: center, center;
     background-repeat: no-repeat;
+    border-radius: 16px;
     z-index: 1;
 
     @media (max-width: @laptop) {
-      width: 60%;
-      height: 400px;
-      left: 20%;
-      top: 120px;
-      max-width: 500px;
-      display: none;
+      top: 32px;
+      border-radius: 12px;
     }
 
     @media (max-width: @tablet) {
-      width: 50%;
-      height: 300px;
-      left: 25%;
-      top: 100px;
-      max-width: 350px;
-      display: none;
+      top: 24px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: @mobile) {
+      top: 20px;
     }
 
     @media (max-width: 600px) {
@@ -72,41 +100,12 @@
       display: none;
     }
   }
-}
-.matrix-general__container {
-  position: relative;
-  margin-top: 36px;
-  display: flex;
-  background-color: @color-default-bg;
-  border: 1px solid rgba(236, 236, 236, 1);
-  flex-direction: column;
-  padding: 32px;
-  border-radius: 16px;
-  gap: 16px;
-  z-index: 2;
-  max-height: fit-content;
-  overflow: hidden;
-
-  @media (max-width: @laptop) {
-    padding: 28px;
-    margin-top: 32px;
-  }
-
-  @media (max-width: @tablet) {
-    padding: 20px;
-    margin-top: 24px;
-    border-radius: 12px;
-  }
-
-  @media (max-width: @mobile) {
-    padding: 16px;
-    margin-top: 20px;
-  }
   &__title {
     font-size: 2rem;
     font-weight: 800;
     line-height: 36px;
     position: relative;
+    z-index: 3;
 
     &::after {
       content: " судьбы";
@@ -136,6 +135,8 @@
     flex-direction: column;
     font-size: 1.0625rem;
     gap: 28px;
+    position: relative;
+    z-index: 3;
 
     @media (max-width: @laptop) {
       font-size: 1rem;

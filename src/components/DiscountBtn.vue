@@ -31,18 +31,20 @@
   @media (max-width: @laptop) {
     border-radius: 18px;
     gap: 12px;
+    padding: 6px 6px;
   }
 
   @media (max-width: @tablet) {
     border-radius: 16px;
     gap: 10px;
-    padding: 6px 0px;
+    padding: 8px 12px 8px 20px;
   }
 
   @media (max-width: @mobile) {
-    padding: 8px 8px 8px 20px;
+    padding: 8px 12px 8px 20px;
     border-radius: 14px;
   }
+
   &__text {
     font-size: 1.25rem;
     font-weight: 800;
@@ -65,7 +67,7 @@
     }
   }
   &__price {
-    padding: 8px 8px 8px 10px;
+    padding: 8px 12px 8px 10px;
     background: @color-default-bg;
     border-radius: 12px;
     display: flex;
@@ -73,22 +75,27 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    min-width: 80px;
 
     @media (max-width: @laptop) {
       border-radius: 10px;
       gap: 10px;
-      padding: 6px 6px 6px 8px;
+      padding: 6px 10px 6px 8px;
+      min-width: 70px;
     }
 
     @media (max-width: @tablet) {
       border-radius: 8px;
       gap: 8px;
-      padding: 6px 6px 6px 8px;
+      padding: 6px 8px 6px 8px;
+      min-width: fit-content;
     }
 
     @media (max-width: @mobile) {
-      padding: 8px 8px 8px 10px;
+      padding: 6px 8px 6px 8px;
       border-radius: 8px;
+      min-width: fit-content;
+      gap: 6px;
     }
   }
   &__old-price {
@@ -105,14 +112,15 @@
     }
 
     @media (max-width: @tablet) {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       line-height: 14px;
       padding-top: 3px;
+      min-width: fit-content;
     }
 
     @media (max-width: @mobile) {
-      font-size: 0.75rem;
-      line-height: 14px;
+      font-size: 0.7rem;
+      line-height: 12px;
     }
 
     &::after {
@@ -152,8 +160,8 @@
     }
 
     @media (max-width: @mobile) {
-      font-size: 1rem;
-      line-height: 22px;
+      font-size: 0.9rem;
+      line-height: 20px;
     }
   }
 

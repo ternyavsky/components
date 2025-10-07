@@ -158,6 +158,7 @@ import lockIcon from "/src/assets/lock.svg";
       border-radius: 16px;
       padding: 12px 16px 8px 16px;
       display: flex;
+      gap: 10px;
       align-items: center;
       justify-content: space-between;
       font-size: 1.75rem;
@@ -181,6 +182,7 @@ import lockIcon from "/src/assets/lock.svg";
         line-height: 24px;
       }
       &__button {
+        min-width: fit-content;
         background: linear-gradient(
           90deg,
           rgba(255, 125, 164, 1) 0%,
