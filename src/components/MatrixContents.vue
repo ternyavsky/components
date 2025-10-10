@@ -352,11 +352,6 @@ import lockIcon from "/src/assets/lock.svg";
         }
       }
 
-      &:hover {
-        animation: ease-in-out 0.3s;
-        cursor: pointer;
-        transform: scale(1.05);
-      }
     }
   }
 }

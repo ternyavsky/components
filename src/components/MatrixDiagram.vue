@@ -46,6 +46,7 @@
     gap: 16px;
     padding: 32px 16px;
     max-width: 100%;
+    margin: 0px 16px;
   }
   &__text {
     display: flex;

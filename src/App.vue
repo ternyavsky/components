@@ -28,7 +28,7 @@ import Matrix from "./components/Matrix.vue";
 
   @media (max-width: @mobile) {
     border-radius: 0;
-    padding: 0px 16px;
+    padding: 0px 0px;
   }
 
   @media (min-width: @large-desktop) {

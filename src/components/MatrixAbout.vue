@@ -21,8 +21,10 @@ const toggleContent = () => {
         <AboutDropContent v-if="isContentVisible" />
       </transition>
     </div>
-    <MatrixSlot />
+    <div class="matrix-about__slot">
+      <MatrixSlot />
     <PromotionBlock />
+    </div>
   </div>
 </template>
 
@@ -43,6 +45,12 @@ const toggleContent = () => {
 
   @media (max-width: @mobile) {
     max-width: 100%;
+  }
+
+  &__slot {
+    @media (max-width: @mobile) {
+      margin: 0px 8px;
+    }
   }
 
   &__title {
@@ -85,7 +93,8 @@ const toggleContent = () => {
     }
 
     @media (max-width: @mobile) {
-      border-radius: 24px;
+      border-radius: 0px;
+      border: none;
       gap: 8px;
     }
   }

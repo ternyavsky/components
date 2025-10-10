@@ -69,6 +69,7 @@ const handleToggle = () => {
     border-radius: 20px;
     padding: 8px 0px 8px 8px;
     gap: 12px;
+    margin: 0px 16px;
   }
   &__info {
     display: flex;
@@ -139,27 +140,26 @@ const handleToggle = () => {
   }
   &__icon {
     border-radius: 20px;
-    max-width: 232px;
-    max-height: 88px;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+    width: 232px;
+    height: 88px;
+    object-fit: cover;
+    flex-shrink: 0;
 
     @media (max-width: @laptop) {
-      max-width: 200px;
-      max-height: 76px;
+      width: 200px;
+      height: 76px;
       border-radius: 18px;
     }
 
     @media (max-width: @tablet) {
-      max-width: 150px;
-      max-height: 60px;
+      width: 150px;
+      height: 60px;
       border-radius: 16px;
     }
 
     @media (max-width: @mobile) {
-      max-width: 73px;
-      min-height: 48px;
+      width: 80px;
+      height: 48px;
       border-radius: 12px;
     }
 

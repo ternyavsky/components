@@ -88,19 +88,19 @@
     margin-bottom: 16px;
 
     @media (max-width: @laptop) {
-      font-size: 1.125rem;
+      font-size: 1.5rem;
       line-height: 26px;
       margin-bottom: 14px;
     }
 
     @media (max-width: @tablet) {
-      font-size: 1rem;
+      font-size: 1.4rem;
       line-height: 24px;
       margin-bottom: 12px;
     }
 
     @media (max-width: @mobile) {
-      font-size: 0.9rem;
+      font-size: 1.3em;
       line-height: 22px;
       margin-bottom: 10px;
     }

@@ -17,7 +17,8 @@ import AddBlockCard from "./AddBlockCard.vue";
         закон, не любит что-то нарушать.
       </p>
 
-      <AddBlockCard />
+      <AddBlockCard :is-lock="false" />
+      <AddBlockCard :is-lock="true" />
     </div>
     <img
       src="/src/assets/drop-content-girl.svg"
@@ -42,6 +43,7 @@ import AddBlockCard from "./AddBlockCard.vue";
   @media (max-width: @tablet) {
     gap: 12px;
     margin-top: 26px;
+    flex-direction: column;
   }
 
   @media (max-width: @mobile) {

@@ -17,8 +17,10 @@ import StateBlock from "./StateBlock.vue";
       Соответственно, положительные моменты нужно развивать, а отрицательные
       прорабатывать или, как минимум знать о них, и стараться нивелировать.
     </p>
-    <AddBlock />
-    <DiscountBtn />
+    <div class="about-drop-content__add-block">
+      <AddBlock />
+      <DiscountBtn />
+    </div>
 
     <div class="about-drop-content__state-block">
       <StateBlock />
@@ -45,7 +47,7 @@ import StateBlock from "./StateBlock.vue";
   }
 
   @media (max-width: @mobile) {
-    padding: 16px 16px 20px 16px;
+    padding: 0px;
     gap: 10px;
   }
 
@@ -67,6 +69,7 @@ import StateBlock from "./StateBlock.vue";
     @media (max-width: @mobile) {
       font-size: 1.125rem;
       line-height: 26px;
+      margin: 0px 16px;
     }
   }
 
@@ -89,12 +92,19 @@ import StateBlock from "./StateBlock.vue";
     @media (max-width: @mobile) {
       font-size: 0.875rem;
       line-height: 22px;
+      margin: 0px 16px;
+    }
+  }
+  &__add-block {
+    @media (max-width: @mobile) {
+      margin: 0px 8px;
     }
   }
 
   &__state-block {
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 28px;
     margin-top: 26px;
 

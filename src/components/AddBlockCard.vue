@@ -1,8 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  isLock: boolean;
+}>();
+</script>
 <template>
   <div class="add-block-card">
     <img
-      src="/src/assets/drop-content-girl.svg"
+      :src="
+        isLock
+          ? '/src/assets/black-lock.svg'
+          : '/src/assets/drop-content-girl.svg'
+      "
       alt="add-block-card-img"
       class="add-block-card__img"
     />
@@ -10,6 +18,7 @@
       <h3 class="add-block-card__title">Прошлая жизнь</h3>
       <div class="add-block-card__description">
         <img
+          v-if="!isLock"
           src="/src/assets/purple-lock.svg"
           alt="arrow-right"
           class="add-block-card__description-icon"
@@ -88,7 +97,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
     flex: 1;
     min-width: 0;
 

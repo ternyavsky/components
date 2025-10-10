@@ -234,9 +234,7 @@
     }
 
     &:hover {
-      animation: ease-out 0.3s;
       cursor: pointer;
-      transform: scale(1.05);
     }
   }
 }

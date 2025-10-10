@@ -25,7 +25,7 @@ import MatrixMaintenance from "./MatrixMaintenance.vue";
         <MatrixAbout />
       </div>
     </div>
-      <MatrixMaintenance />
+    <MatrixMaintenance />
   </div>
 </template>
 
