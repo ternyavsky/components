@@ -80,8 +80,9 @@ import MatrixMaintenance from "./MatrixMaintenance.vue";
   flex-direction: row;
   gap: 48px;
 
-  @media (max-width: @laptop) {
+  @media (max-width: 1300px) {
     gap: 32px;
+    flex-direction: column;
   }
 
   @media (max-width: @tablet) {
