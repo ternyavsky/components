@@ -3,6 +3,9 @@ import { defineEmits, defineProps } from "vue";
 
 const props = defineProps<{
   isOpen: boolean;
+  title: string;
+  description: string;
+  img: string;
 }>();
 
 const emit = defineEmits<{
@@ -16,19 +19,19 @@ const handleToggle = () => {
 <template>
   <div class="about-drop__header">
     <img
-      src="/src/assets/mirror-girl.svg"
+      :src="img"
       alt="drop-header-icon"
       class="about-drop__header__icon about-drop__header__icon--desktop"
     />
     <img
-      src="/src/assets/mobile-mirror-girl.svg"
+      :src="img"
       alt="drop-header-icon"
       class="about-drop__header__icon about-drop__header__icon--mobile"
     />
     <div class="about-drop__header__info">
       <div class="about-drop__header__text">
-        <h2 class="about-drop__header__title">Личные качества</h2>
-        <p class="about-drop__header__description">Плюсы и минусы</p>
+        <h2 class="about-drop__header__title">{{ title }}</h2>
+        <p class="about-drop__header__description">{{ description }}</p>
       </div>
       <div class="about-drop__header__button" @click="handleToggle">
         <img

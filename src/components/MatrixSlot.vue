@@ -1,14 +1,17 @@
+<script setup lang="ts">
+defineProps<{
+  title: string;
+  description: string;
+  img: string;
+}>();
+</script>
 <template>
   <div class="matrix-slot">
     <div class="matrix-slot__content">
-      <img
-        src="/src/assets/mirror-girl.svg"
-        alt="matrix-slot-img"
-        class="matrix-slot__img"
-      />
+      <img :src="img" alt="matrix-slot-img" class="matrix-slot__img" />
       <div class="matrix-slot__text">
-        <h2 class="matrix-slot__title">Проработка души</h2>
-        <p class="matrix-slot__description">В нынешнем воплощении</p>
+        <h2 class="matrix-slot__title">{{ title }}</h2>
+        <p class="matrix-slot__description">{{ description }}</p>
       </div>
     </div>
     <div class="matrix-slot__button">
@@ -100,6 +103,9 @@
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     @media (max-width: @laptop) {
       font-size: 16px;
@@ -122,6 +128,9 @@
     font-weight: 700;
     line-height: 20px;
     color: @color-grey-main;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     @media (max-width: @laptop) {
       font-size: 13px;

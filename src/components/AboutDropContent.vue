@@ -2,20 +2,19 @@
 import AddBlock from "./AddBlock.vue";
 import DiscountBtn from "./DiscountBtn.vue";
 import StateBlock from "./StateBlock.vue";
+defineProps<{
+  title: string;
+  description: string;
+}>();
 </script>
 
 <template>
   <div class="about-drop-content">
     <h2 class="about-drop-content__title">
-      Визитная карточка: характер человека в плюсе и минусе
+      {{ title }}
     </h2>
     <p class="about-drop-content__description">
-      Это своего рода, «визитная карточка»: характер и личные качества, которые
-      человек получает в момент рождения. Как и всё другое в Матрице судьбы,
-      этот аспект имеет как положительный, так и отрицательный вариант развития.
-      Хотя на практике плюсы и минусы находятся в некой неравной пропорции.
-      Соответственно, положительные моменты нужно развивать, а отрицательные
-      прорабатывать или, как минимум знать о них, и стараться нивелировать.
+      {{ description }}
     </p>
     <div class="about-drop-content__add-block">
       <AddBlock />
